@@ -24,7 +24,7 @@ This will:
 - Appends a cache-busting query parameter to static file URLs.
 - Ensure: Static files are correctly linked with {% static %} tags.
 
-  ⚠️ Notes:
+⚠️ Notes:
 - Browser Must Be Closed: Ensure Chrome, Firefox, or Edge is closed before running the script.
 - Admin/Root Permissions: Deleting browser cache may require elevated permissions.
 - Firefox Profiles: The script now clears cache for all Firefox profiles dynamically.

@@ -41,7 +41,7 @@ def clear_browser_cache():
                     for profile_cache in Path(cache_dir).glob("*/cache2/entries"):
                         shutil.rmtree(profile_cache, ignore_errors=True)
                         print(f"✅ Cleared Firefox cache: {profile_cache}")
-
+                # Checks for other OS
                 else:
                     shutil.rmtree(cache_dir, ignore_errors=True)
                     print(f"✅ Cleared cache: {cache_dir}")

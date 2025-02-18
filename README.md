@@ -10,7 +10,6 @@ django-cachebuster is a Django package designed to handle cache busting for stat
 - It generates versioned URLs for static files, often by appending a hash or timestamp to the file path (e.g., style.css → style.css?v=abc123).
 - When you update a file, the cachebuster automatically assigns a new version, forcing the browser to load the latest file.
 
-
 🚀 Key Benefits:
 1. Prevents Cache Staleness.
 2. Automates Versioning: No need to manually rename files or add version query parameters.
@@ -23,7 +22,8 @@ django-cachebuster is a Django package designed to handle cache busting for stat
 Open your settings.py file and add cachebuster to the INSTALLED_APPS list:
 
 INSTALLED_APPS = [
-    # Other apps
+    # Other apps,
+    
     'cachebuster',
 ]
 

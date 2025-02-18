@@ -1,7 +1,7 @@
 🚀 Task Automation Script 
 A simple Python script to automate static files refresh, server restart, and browser cache clearing for Django projects.
 
-1️⃣First leap
+#1️⃣First leap
 -Django cachebuster integration
 
 django-cachebuster is a Django package designed to handle cache busting for static files. Cache busting ensures that browsers load the most recent versions of your static files (like CSS, JavaScript, and images) by appending a unique version identifier to the file URLs. This helps avoid issues where browsers serve outdated files from cache instead of fetching the latest changes.
@@ -49,11 +49,12 @@ This configuration tells Django to use the cachebusting mechanism and ensures th
 In your HTML templates, use the {% static %} tag along with the {{ cachebust }} tag to automatically append a version query string to the static files.
 
 Example:
+
 `<script src="{% static 'script.js' %}?{{ cachebust }}"></script>`
 
 This will reference the static file and append a versioning query string based on the file's modification timestamp.
 
-2️⃣ Second Leap
+#2️⃣ Second Leap
 
 🛠️ Installation
 - Navigate to the project root.
@@ -73,6 +74,7 @@ This will:
 - Restarts the server with runserver.
 - Ensure: Appends a cache-busting query parameter to static file URLs.
 Example
+
 `<script src="{% static 'script.js' %}?{{ cachebust }}"></script>`
 - Ensure: Static files are correctly linked with `{% static %}` tags.
 

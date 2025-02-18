@@ -22,6 +22,7 @@ django-cachebuster is a Django package designed to handle cache busting for stat
 1. django-cachebuster installation is automated with the python script.
 
 2. Add cachebuster to INSTALLED_APPS
+
 Open your settings.py file and add cachebuster to the INSTALLED_APPS list:
 
 INSTALLED_APPS = [

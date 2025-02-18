@@ -1,4 +1,5 @@
 import os
+import time
 import platform
 import shutil
 from pathlib import Path
@@ -48,15 +49,25 @@ def clear_browser_cache():
 
             except Exception as e:
                 print(f"⚠️ Failed to clear cache: {cache_dir}\n{e}")
+                
+def install_cachebuster():
+    print("Installing django-cachebuster...")
+    os.system("pip install django-cachebuster")
+    
 
 def automate_static_refresh():
+    # Call Django-cachebuster installation function
+    install_cachebuster()
+    time.sleep(3)
+
     print("Starting Static File Refresh Process...")
 
     # Call clear_browser_cache function
     clear_browser_cache()
+    time.sleep(3)
 
     # Restart Django server
-    print("Restarting Django server...")
+    print("Starting Django server...")
     
     # Close any running server process
     os.system("pkill -f runserver")  

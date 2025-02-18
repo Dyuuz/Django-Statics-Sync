@@ -7,7 +7,9 @@ A simple Python script to automate static files refresh, server restart, and bro
 django-cachebuster is a Django package designed to handle cache busting for static files. Cache busting ensures that browsers load the most recent versions of your static files (like CSS, JavaScript, and images) by appending a unique version identifier to the file URLs. This helps avoid issues where browsers serve outdated files from cache instead of fetching the latest changes.
 
 🚀 How it works:
-- It generates versioned URLs for static files, often by appending a hash or timestamp to the file path (e.g., style.css → style.css?v=abc123).
+- It generates versioned URLs for static files, often by appending a hash or timestamp to the file path
+  
+(e.g., style.css → style.css?v=abc123).
 - When you update a file, the cachebuster automatically assigns a new version, forcing the browser to load the latest file.
 
 🚀 Key Benefits:
@@ -30,7 +32,7 @@ INSTALLED_APPS = [
 3. Configure Static Files and Cachebuster Settings
 In your settings.py, configure the cachebuster settings. Ensure the following:
 
-STATIC_URL = '/static/'
+ STATIC_URL = '/static/'
 
 # Configure cachebuster storage
 STATICFILES_STORAGE = 'cachebuster.storage.CachebusterManifestStaticFilesStorage'

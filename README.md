@@ -27,12 +27,13 @@ INSTALLED_APPS = [
 
     # Other apps,
     'cachebuster',
+    
 ]
 
 3. Configure Static Files and Cachebuster Settings
 In your settings.py, configure the cachebuster settings. Ensure the following:
 
-STATIC_URL = '/static/'
+`STATIC_URL = '/static/'`
 
 Configure cachebuster storage
 

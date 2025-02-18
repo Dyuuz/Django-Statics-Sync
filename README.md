@@ -32,12 +32,14 @@ INSTALLED_APPS = [
 3. Configure Static Files and Cachebuster Settings
 In your settings.py, configure the cachebuster settings. Ensure the following:
 
- STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
-# Configure cachebuster storage
+Configure cachebuster storage
+
 STATICFILES_STORAGE = 'cachebuster.storage.CachebusterManifestStaticFilesStorage'
 
-# Optional: Define the cachebuster URL pattern
+Optional: Define the cachebuster URL pattern
+
 CACHEBUSTER_URL = '/static/'
 
 This configuration tells Django to use the cachebusting mechanism and ensures the versioning of static files.
@@ -46,6 +48,7 @@ This configuration tells Django to use the cachebusting mechanism and ensures th
 In your HTML templates, use the {% static %} tag along with the {{ cachebust }} tag to automatically append a version query string to the static files.
 
 Example:
+
 <script src="{% static 'script.js' %}?{{ cachebust }}"></script>
 
 This will reference the static file and append a versioning query string based on the file's modification timestamp.

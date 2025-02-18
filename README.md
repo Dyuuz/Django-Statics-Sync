@@ -60,7 +60,7 @@ This will reference the static file and append a versioning query string based o
 
 🛠️ Installation
 - Navigate to the project root.
-- Clone the repository.
+- Clone this repository in root dir.
 - Ensure dependencies are installed (django, etc)
 
 🚀 Usage

@@ -1,4 +1,4 @@
-🚀 Task Automation Script 🛠️
+🚀 Task Automation Script 
 A simple Python script to automate static files refresh, server restart, and browser cache clearing for Django projects.
 
 1️⃣First leap
@@ -8,8 +8,8 @@ django-cachebuster is a Django package designed to handle cache busting for stat
 
 🚀 How it works:
 - It generates versioned URLs for static files, often by appending a hash or timestamp to the file path
-  
-(e.g., style.css → style.css?v=abc123).
+`(e.g., style.css → style.css?v=abc123)`
+
 - When you update a file, the cachebuster automatically assigns a new version, forcing the browser to load the latest file.
 
 🚀 Key Benefits:
@@ -37,11 +37,11 @@ In your settings.py, configure the cachebuster settings. Ensure the following:
 
 Configure cachebuster storage
 
-STATICFILES_STORAGE = 'cachebuster.storage.CachebusterManifestStaticFilesStorage'
+`STATICFILES_STORAGE = 'cachebuster.storage.CachebusterManifestStaticFilesStorage'`
 
 Optional: Define the cachebuster URL pattern
 
-CACHEBUSTER_URL = '/static/'
+`CACHEBUSTER_URL = '/static/'`
 
 This configuration tells Django to use the cachebusting mechanism and ensures the versioning of static files.
 
@@ -49,8 +49,7 @@ This configuration tells Django to use the cachebusting mechanism and ensures th
 In your HTML templates, use the {% static %} tag along with the {{ cachebust }} tag to automatically append a version query string to the static files.
 
 Example:
-
-<script src="{% static 'script.js' %}?{{ cachebust }}"></script>
+`<script src="{% static 'script.js' %}?{{ cachebust }}"></script>`
 
 This will reference the static file and append a versioning query string based on the file's modification timestamp.
 
@@ -63,7 +62,7 @@ This will reference the static file and append a versioning query string based o
 
 🚀 Usage
 - Run the script from your Django project root (same directory as manage.py):
-- python refresh_static.py
+- `python refresh_static.py`
 
 This will:
 - Clear the browser cache.
@@ -73,8 +72,9 @@ This will:
 🧠 How It Works
 - Restarts the server with runserver.
 - Ensure: Appends a cache-busting query parameter to static file URLs.
-E.g <script src="{% static 'script.js' %}?{{ cachebust }}"></script>
-- Ensure: Static files are correctly linked with {% static %} tags.
+Example
+`<script src="{% static 'script.js' %}?{{ cachebust }}"></script>`
+- Ensure: Static files are correctly linked with `{% static %}` tags.
 
 ⚠️ Notes:
 - Browser Must Be Closed: Ensure Chrome, Firefox, or Edge is closed before running the script.
@@ -82,7 +82,7 @@ E.g <script src="{% static 'script.js' %}?{{ cachebust }}"></script>
 - Firefox Profiles: The script now clears cache for all Firefox profiles dynamically.
 
 💡 Troubleshooting
-- If changes don't reflect, use Ctrl+Shift+R to force a hard reload.
+- If changes don't reflect, use `Ctrl+Shift+R` to force a hard reload.
 - Check settings.py for STATICFILES_DIRS and STATIC_ROOT configurations.
 
 VOILA🥂

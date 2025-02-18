@@ -24,8 +24,8 @@ django-cachebuster is a Django package designed to handle cache busting for stat
 Open your settings.py file and add cachebuster to the INSTALLED_APPS list:
 
 INSTALLED_APPS = [
+
     # Other apps,
-    
     'cachebuster',
 ]
 

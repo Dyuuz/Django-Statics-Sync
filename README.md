@@ -1,4 +1,5 @@
 🚀 Task Automation Script 
+
 A simple Python script to automate static files refresh, server restart, and browser cache clearing for Django projects.
 
 # 1️⃣First Leap
